@@ -19,7 +19,8 @@ class webuser(models.Model):
     paymentID = models.IntegerField(max_length = 10)
 
 ##Tier 2 Dependents
-class driver(webuser):
+class driver(models.Model):
+    userID = models.ForeignKey(webuser, related_name = 'driverUserID', on_delete = models.CASCADE)
     averageRating = models.DecimalField(max_digits = 65, decimal_places = 1, validators = [MaxValueValidator(5), MinValueValidator(1)])
     bank = models.CharField(max_length = 255)
     license = models.CharField(max_length = 255)
@@ -37,6 +38,7 @@ class groceryorder(models.Model):
     deliveryFee = models.DecimalField(max_digits = 65, decimal_places = 2)
     tip = models.DecimalField(max_digits = 65, decimal_places = 2)
     total = models.DecimalField(max_digits = 65, decimal_places = 2)
+    complete = models.BooleanField()
 
 class item(models.Model):
     itemID = models.IntegerField(max_length = 10, primary_key = True)
