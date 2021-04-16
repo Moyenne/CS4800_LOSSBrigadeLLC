@@ -1,0 +1,15 @@
+<html>
+<head>
+    {% if title %}
+        <title>Last Shop - {{title}}</title>
+    {% else %}
+        <title>Last Shop</title>
+    {% endif %}
+</head>
+<body>
+    {% for item in items %}
+    <h1>{{item.itemID}}, {{item.brandName}} brand {{item.itemName}}</h1>
+    <p>{{item.quantity}} in stock at {{item.storeID.storeAddress}}.</p>
+    {% endfor %}
+</body>
+</html>

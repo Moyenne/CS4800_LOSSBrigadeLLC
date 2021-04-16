@@ -1,0 +1,1 @@
+web: gunicorn lossbrigadellc_lastshop.wsgi
