@@ -81,9 +81,9 @@ WSGI_APPLICATION = 'lossbrigadellc_lastshop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_543f3afce929670',
-        'USER': 'b44cbfbc72da45',
-        'PASSWORD': 'bdd0587b',
+        'NAME': 'heroku_68149aca37605c7',
+        'USER': 'b8edab5b02891a',
+        'PASSWORD': '682d0f30',
         'HOST': 'us-cdbr-east-03.cleardb.com',
         'PORT': '3306',
         'OPTIONS': {
@@ -91,7 +91,6 @@ DATABASES = {
         }
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
