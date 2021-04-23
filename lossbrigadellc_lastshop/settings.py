@@ -25,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '76pc4#*pwzbe=m8o-67f-0yx30v!n%n+=2i7y!6#y1y_c_80x3'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'https://lastshop.herokuapp.com/'
