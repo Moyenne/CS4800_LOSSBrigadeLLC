@@ -38,7 +38,6 @@ class groceryorder(models.Model):
     deliveryFee = models.DecimalField(max_digits = 65, decimal_places = 2)
     tip = models.DecimalField(max_digits = 65, decimal_places = 2)
     total = models.DecimalField(max_digits = 65, decimal_places = 2)
-    complete = models.BooleanField()
 
 class item(models.Model):
     itemID = models.IntegerField(max_length = 10, primary_key = True)
