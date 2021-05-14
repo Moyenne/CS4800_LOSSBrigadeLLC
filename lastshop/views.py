@@ -11,7 +11,12 @@ def home(request):
     return render(request, 'lastshop/home.html')
 
 def homepage(request):
-    return render(request, 'lastshop/HomePage.html')
+    context = {
+        'stores' : store.objects.all(),
+        'items': item.objects.all(),
+        'tags': tag.objects.all(),
+    }
+    return render(request, 'lastshop/HomePage.html', context)
 
 def LaunchPage(request):
     return render(request, 'lastshop/LaunchPage.html')
