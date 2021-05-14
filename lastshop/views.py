@@ -12,3 +12,6 @@ def home(request):
 
 def homepage(request):
     return render(request, 'lastshop/HomePage.html')
+
+def LaunchPage(request):
+    return render(request, 'lastshop/LaunchPage.html')
