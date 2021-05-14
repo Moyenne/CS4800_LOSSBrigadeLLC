@@ -1,39 +1,39 @@
-
-<hr id="about">
-<!-- About Store Section -->
+{% for store in stores %}
+<hr id="store">
+<!-- Store Header Section -->
 <div class="w3-container w3-padding-32 w3-center">
-    <h3>About Vons</h3><br>
-    <img src="Vons.jpeg" alt="Vons" class="w3-image" style="display:block;margin:auto" width="800" height="533">
+    <h3>{{store.storeName}}</h3><br>
+    <!--<img src="Vons.jpeg" alt="Vons" class="w3-image" style="display:block;margin:auto" width="800" height="533">-->
     <div class="w3-padding-32">
-        <h4><b>I am Who I Am!</b></h4>
+        <!--<h4><b>I am Who I Am!</b></h4>
         <h6><i>With Passion For Real, Good Food</i></h6>
         <p>Vons operates as a banner of Albertsons Companies, one of the largest food and drug retailers in the United States. With both a strong local presence and national scale, the company operates stores across 35 states and the District of Columbia under 20 well-known banners. Albertsons Companies is committed to helping people across the country live better lives by making a meaningful difference, neighborhood by neighborhood. In 2017 alone, along with the Albertsons Companies Foundation, the company gave nearly $300 million in food and financial support. These efforts helped millions of people in the areas of hunger relief, education, cancer research and treatment, programs for people with disabilities and veterans outreach.</p>
+        -->
+        <h4><b>{{store.storeAddress}}</b></h4>
     </div>
 </div>
 <hr>
 
 <div class="w3-row-padding w3-padding-16 w3-center">
-    <div class="w3-quarter">
-        <img src="white-marble-cat-3000-61x61-matt.jpeg" alt="Popsicle" style="width:100%">
-        <h3>All I Need Is a Popsicle</h3>
-        <p>Lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-        <img src="white-marble-cat-3000-61x61-matt.jpeg" alt="Salmon" style="width:100%">
-        <h3>Salmon For Your Skin</h3>
-        <p>Once again, some random text to lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-        <img src="white-marble-cat-3000-61x61-matt.jpeg" alt="Sandwich" style="width:100%">
-        <h3>The Perfect Sandwich, A Real Classic</h3>
-        <p>Just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
-    <div class="w3-quarter">
-        <img src="white-marble-cat-3000-61x61-matt.jpeg" alt="Croissant" style="width:100%">
-        <h3>Le French</h3>
-        <p>Lorem lorem lorem lorem ipsum text praesent tincidunt ipsum lipsum.</p>
-    </div>
+    {% for item in items %}
+        {% if item.storeID_id == store.storeID %}
+            <div class="w3-quarter">
+                <!--<img src={{item.image}} style="width:100%">-->
+                    <h3>{{item.itemName}}, by {{item.brandName}}</h3>
+                        <h4><b>Tags: </b>
+                            {% for tag in tags %}
+                                {% if tag.tagID_id == item.itemID %}
+                                    {{tag.tagName}}&nbsp;
+                                {% endif %}
+                            {% endfor %}
+                        </h4>
+                <p>{{item.quantity}} in stock.</p>
+            </div>
+        {% else %}
+        {% endif %}
+    {% endfor %}
 </div>
+{% endfor %}
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <!-- Pagination -->
@@ -50,7 +50,7 @@
 
 <hr id="about">
 
-<!-- Footer -->
+<!-- Footer
 <footer class="w3-row-padding w3-padding-32">
     <div class="w3-third">
         <h3>FOOTER</h3>
@@ -85,6 +85,7 @@
         </p>
     </div>
 </footer>
+ -->
 
 <!-- End page content -->
 </div>
