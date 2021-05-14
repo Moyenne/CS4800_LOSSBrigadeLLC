@@ -43,7 +43,7 @@ class item(models.Model):
     itemID = models.IntegerField(max_length = 10, primary_key = True)
     itemName = models.CharField(max_length = 255)
     quantity = models.IntegerField()
-    image = models.URLField()
+    image = models.CharField(max_length = 255)
     brandName = models.CharField(max_length = 255)
     storeID = models.ForeignKey(store, on_delete = models.CASCADE)
     tagID = models.IntegerField(max_length = 10)
