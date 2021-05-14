@@ -45,6 +45,7 @@ class Migration(migrations.Migration):
                 ('storeAddress', models.CharField(max_length=255)),
             ],
         ),
+
         migrations.CreateModel(
             name='webuser',
             fields=[
@@ -58,6 +59,7 @@ class Migration(migrations.Migration):
                 ('paymentID', models.IntegerField(max_length=10)),
             ],
         ),
+
         migrations.CreateModel(
             name='driver',
             fields=[
