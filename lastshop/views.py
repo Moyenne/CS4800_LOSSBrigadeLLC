@@ -9,3 +9,9 @@ def about(request):
 
 def home(request):
     return render(request, 'lastshop/home.html')
+
+def homepage(request):
+    return render(request, 'lastshop/HomePage.html')
+
+def LaunchPage(request):
+    return render(request, 'lastshop/LaunchPage.html')
