@@ -82,9 +82,9 @@ WSGI_APPLICATION = 'lossbrigadellc_lastshop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'heroku_682dcf58801b1fb',
-        'USER': 'b982f981377bc0',
-        'PASSWORD': '07da5986',
+        'NAME': 'heroku_66a4a4e3eb13897',
+        'USER': 'b06bb75a3623da',
+        'PASSWORD': 'cc11d9c0',
         'HOST': 'us-cdbr-east-03.cleardb.com',
         'PORT': '3306',
         'OPTIONS': {
