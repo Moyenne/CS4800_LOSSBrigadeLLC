@@ -16,13 +16,13 @@
 
 <div class="w3-row-padding w3-padding-16 w3-center">
     {% for item in items %}
-        {% if item.storeID_id.storeID == store.storeID %}
+        {% if item.storeID_id == store.storeID %}
             <div class="w3-quarter">
                 <img src={{item.image}} style="width:100%">
-                    <h3>{{item.itemName}}, by {{item.brandName}}{{item.storeID_id}}</h3>
+                    <h3>{{item.itemName}}, by {{item.brandName}}</h3>
                         <h4><b>Tags: </b>
                             {% for tag in tags %}
-                                {% if tag.tagID_id.itemID == item.itemID %}
+                                {% if tag.tagID_id == item.itemID %}
                                     {{tag.tagName}}&nbsp;
                                 {% endif %}
                             {% endfor %}
