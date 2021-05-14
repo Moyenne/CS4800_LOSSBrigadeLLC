@@ -16,6 +16,8 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+MEDIA_URL = '/lastshop/'
+MEDIA_ROOT = Path(__file__).joinpath(BASE_DIR, 'lastshop')
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +33,6 @@ ALLOWED_HOSTS = [
     'https://lastshop.herokuapp.com/'
 ]
 
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    "crispy_forms",
 ]
 
 MIDDLEWARE = [
@@ -133,3 +135,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
 
 django_heroku.settings(locals())
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"

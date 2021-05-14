@@ -12,7 +12,7 @@ class webuser(models.Model):
     userName = models.CharField(max_length = 255)
     phoneNumber = models.IntegerField(max_length = 11)
     emailAddress = models.EmailField()
-    password = models.CharField(max_length = 255)
+    password = models.CharField(max_length = 255) #widget=forms.PasswordInput)
     deliveryAddress = models.CharField(max_length = 255)
     profession = models.CharField(max_length = 255)
     paymentID = models.IntegerField(max_length = 10)
@@ -24,5 +24,8 @@ class Profile(models.Model):
     password = models.CharField(max_length = 255)
     deliveryAddress = models.CharField(max_length = 255)
     profession = models.CharField(max_length = 255)
+
+    def __str__(self):
+        return f'{self.userName, self.password}'
 
 

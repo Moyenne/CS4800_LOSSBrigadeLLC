@@ -21,4 +21,5 @@ urlpatterns = [
     path('', include('lastshop.urls')),
     path('admin/', admin.site.urls),
     path('register/', users_views.register, name = 'register'),
+    path('login/', users_views.loginls, name = 'login'),
 ]
