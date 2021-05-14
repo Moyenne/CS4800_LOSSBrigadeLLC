@@ -20,7 +20,7 @@ class webuser(models.Model):
 class Profile(models.Model):
     userName = models.CharField(max_length = 255)
     phoneNumber = models.IntegerField(max_length = 11)
-    emailAddress = models.EmailField(max_length = 255)
+    emailAddress = models.CharField(max_length = 255)
     password = models.CharField(max_length = 255)
     deliveryAddress = models.CharField(max_length = 255)
     profession = models.CharField(max_length = 255)
