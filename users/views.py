@@ -1,7 +1,7 @@
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.shortcuts import redirect, render
-from users.forms import SignUpForm, CustomUserCreationForm
+from users.forms import CustomUserCreationForm
 
 def register(request):
     if request.method == "POST":
