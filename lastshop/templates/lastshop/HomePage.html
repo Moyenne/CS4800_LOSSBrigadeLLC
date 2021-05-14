@@ -22,7 +22,7 @@
                     <h3>{{item.itemName}}, by {{item.brandName}}</h3>
                         <h4><b>Tags: </b>
                             {% for tag in tags %}
-                                {% if tag.tagID_id.tagID == item.tagID %}
+                                {% if tag.tagID_id.itemID == item.itemID %}
                                     {{tag.tagName}}&nbsp;
                                 {% endif %}
                             {% endfor %}
